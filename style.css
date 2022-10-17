@@ -1,0 +1,80 @@
+body{
+    margin: 0%;
+    background: url(./17f440_no_logo_no_text.jpg) repeat-x 100% fixed,
+    radial-gradient(gold, goldenrod) fixed;
+    background-size: 100%;  
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+    font-size: 150%;
+    padding: 1%;
+    text-align: center;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 100%;
+    height: 100%;
+    padding: 1%;
+    background-color: aquamarine;
+    border-radius: 16px;
+    border: double;
+}
+.aside-button{
+    font-size: 70%;
+}
+.price-list{
+    width: 100%;
+    border-radius: 16px;
+}
+.choose{
+    font-size: 70%;
+}
+.form{
+    align-items: center;
+    margin: 0%;
+    border: double;
+    border-radius: 16px;
+    background-color: blue;
+}
+.calc{
+    padding: 0%;
+    margin: 0%;
+    font-size: 100%;
+    flex-direction: column;
+}
+.radios{
+    font-size: 75%;
+    flex-direction: column;
+    text-align: left;
+}
+.checkboxes{
+    font-size: 75%;
+}
+#button-calc{
+    margin-top: 2%;
+}
+#result{
+    font-size: 100%;
+}
+.input{
+    justify-content: space-between;
+    font-size: 100%;
+}
+input{
+    font-size: 55%;
+    padding: 0%;
+    margin: 0%;
+    border: groove;
+    border-radius: 8px;
+}
+button{
+    font-size: 55%;
+    padding: 0%;
+    margin: 0%;
+    border: groove;
+    border-radius: 8px;
+}
