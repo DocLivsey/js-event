@@ -43,7 +43,7 @@ function updatePrice() {
 
   // Скрываем или показываем чекбоксы.
   let checkDiv = document.getElementById("checkboxes");
-  checkDiv.style.display = (select.value == "3" ? "none" : "flex");
+  checkDiv.style.display = ((select.value == "3" || select.value == "2") ? "none" : "flex");
 
   // Смотрим какие товарные свойства выбраны.
   let checkboxes = document.querySelectorAll("#checkboxes input");
@@ -63,6 +63,9 @@ function updatePrice() {
 window.addEventListener('DOMContentLoaded', function (event) {
   let calcDiv = document.getElementById("calc-label");
   calcDiv.style.display = "none";
+
+  let buttonInput = document.getElementById("input");
+  buttonInput.style.display = "none";
   
   // Скрываем радиокнопки.
   let radioDiv = document.getElementById("radios");
