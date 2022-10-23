@@ -22,18 +22,20 @@
       </aside>
       <div class="form">
         <form action="/" method="post">
-        <div class="calc">
-          <label for="field1" id="out-label"></label>
-          <input required type="number" name="field1" placeholder="сколько желаете?">
-          <button id="button-calc" onclick="return absoluteChoose();">Расчитать</button>
+        <div class="calc" id="calc">
+          <div class="calc-label" id="calc-label">
+            <label for="field1" id="out-label"></label>
+            <input required type="number" name="coefficient-input" placeholder="сколько желаете?">
+            <button id="button-calc" onclick="return coefficientCalc();">Расчитать</button>
+          </div>
           <div class="radios" id="radios"> 
-            <lablel class="radio-label"><input type="radio" id="radio" name="services-options">На один час</lablel>
-            <lablel class="radio-label"><input type="radio" id="radio" name="services-options">На два часа</lablel>
-            <lablel class="radio-label"><input type="radio" id="radio" name="services-options">На три часа</lablel>
+            <lablel class="radio-label"><input type="radio" id="radio" name="services-options" value="option1">На один час</lablel>
+            <lablel class="radio-label"><input type="radio" id="radio" name="services-options" value="option2">На два часа</lablel>
+            <lablel class="radio-label"><input type="radio" id="radio" name="services-options" value="option3">На три часа</lablel>
           </div>
           <div class="checkboxes" id="checkboxes">
-            <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-1">свойство 1</label>
-            <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-2">свойство 2</label>
+            <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-1" value="prop1">свойство 1</label>
+            <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-2" value="prop2">свойство 2</label>
           </div>
           <div id="result"></div>
         </div>

@@ -9,7 +9,7 @@ function getPrices(){
       option3: 3,
     },
     servicesProperties: {
-      prop1: 1,
+      prop1: 1.5,
       prop2: 2,
     }
   }
@@ -34,9 +34,9 @@ function updatePrice() {
   let radios = document.getElementsByName("services-options");
   radios.forEach(function(radio) {
     if (radio.checked) {
-      let optionPrice = prices.servicesOptions[radio.value];
+      let optionPrice = parseInt(prices.servicesOptions[radio.value]);
       if (optionPrice !== undefined) {
-        price += optionPrice;
+        price *= optionPrice;
       }
     }
   });
@@ -49,9 +49,9 @@ function updatePrice() {
   let checkboxes = document.querySelectorAll("#checkboxes input");
   checkboxes.forEach(function(checkbox) {
     if (checkbox.checked) {
-      let propPrice = prices.servicesProperties[checkbox.name];
+      let propPrice = prices.servicesProperties[checkbox.value];
       if (propPrice !== undefined) {
-        price += propPrice;
+        price *= propPrice;
       }
     }
   });
@@ -61,6 +61,9 @@ function updatePrice() {
 }
 
 window.addEventListener('DOMContentLoaded', function (event) {
+  let calcDiv = document.getElementById("calc-label");
+  calcDiv.style.display = "none";
+  
   // Скрываем радиокнопки.
   let radioDiv = document.getElementById("radios");
   radioDiv.style.display = "none";
@@ -140,12 +143,11 @@ function choose5(){
 } 
 
 function calc(){
-  let count = document.getElementsByName("field1");
+  let count = document.getElementsByName("coefficient-input");
   let out = document.getElementById("result");
   let txt = "Итого: ";
   let rub = " ₽";
   isFieldFill = true;
-  out.innerHTML = txt + price * parseInt(count[0].value) + rub;
   return false;
 }
 
