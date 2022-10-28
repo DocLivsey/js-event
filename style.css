@@ -51,6 +51,8 @@ aside{
     text-align: left;
 }
 .checkboxes{
+    flex-direction: column;
+    text-align: left;
     font-size: 75%;
 }
 #button-calc{
@@ -59,7 +61,7 @@ aside{
 #result{
     font-size: 100%;
 }
-.input{
+.output-button{
     justify-content: space-between;
     font-size: 100%;
 }

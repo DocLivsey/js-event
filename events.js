@@ -58,14 +58,18 @@ function updatePrice() {
   
   let prodPrice = document.getElementById("result");
   prodPrice.innerHTML = price + " рублей";
+
+  let f1 = document.getElementsByName("coefficient-input");
+  let res = document.getElementById("new-result");
+  res.innerHTML = f1[0].value * price;
 }
 
 window.addEventListener('DOMContentLoaded', function (event) {
   let calcDiv = document.getElementById("calc-label");
-  calcDiv.style.display = "none";
+  calcDiv.style.display = "flex";
 
-  let buttonInput = document.getElementById("input");
-  buttonInput.style.display = "none";
+  let buttonInput = document.getElementById("output-button");
+  buttonInput.style.display = "flex";
   
   // Скрываем радиокнопки.
   let radioDiv = document.getElementById("radios");
@@ -102,57 +106,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
   });
 
+  let f1 = document.getElementsByName("coefficient-input");
+  f1[0].addEventListener("change", function (event) {
+    if (f1[0].value.match(/^[1-9][0-9]*$/g) == null) {
+      alert("Введено не число");
+      res.innerHTML = 0;
+    }
+    updatePrice();
+  });
+
   updatePrice();
 });
-
-function choose1(){
-  price = 100;
-  let txt = `Цена за одну услугу ${price} ₽`;
-  let app = document.getElementById("out-label");
-  app.innerHTML = txt;
-  return false;
-} 
-
-function choose2(){
-  price = 100;
-  let txt = `Цена за одну услугу ${price} ₽`;
-  let app = document.getElementById("out-label");
-  app.innerHTML = txt;
-  return false;
-} 
-
-function choose3(){
-  price = 300;
-  let txt = `Цена за одну услугу ${price} ₽`;
-  let app = document.getElementById("out-label");
-  app.innerHTML = txt;
-  return false;
-} 
-
-function choose4(){
-  price = 500;
-  let txt = `Цена за одну услугу ${price} ₽`;
-  let app = document.getElementById("out-label");
-  app.innerHTML = txt;
-  return false;
-} 
-
-function choose5(){
-  price = 1000;
-  let txt = `Цена за одну услугу ${price} ₽`;
-  let app = document.getElementById("out-label");
-  app.innerHTML = txt;
-  return false;
-} 
-
-function calc(){
-  let count = document.getElementsByName("coefficient-input");
-  let out = document.getElementById("result");
-  let txt = "Итого: ";
-  let rub = " ₽";
-  isFieldFill = true;
-  return false;
-}
 
 function clickEvent(){
   if(isFieldFill == true){
@@ -165,16 +129,4 @@ function clickEventSecond(){
   let text = document.getElementById("result");
   alert(text[0]);
   return false;
-}
-
-function vova()
-{
-  let vova = prompt("Вова гей?");
-  if (vova == 'да' | vova == 'da'){
-    alert("вы правы")
-  }
-  else{
-    alert("вы не правы, вова гей")
-  }
-  return false
 }
