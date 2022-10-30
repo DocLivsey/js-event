@@ -8,7 +8,7 @@
     <script src="./events.js" defer></script>
   </head>
   <body>
-    <div>
+    <div class="content">
       <aside>
         Оказание услуг <br>
         <select name="field-choose" id="choose" class="choose" on>
@@ -23,12 +23,13 @@
       <div class="form">
         <form action="/" method="post">
         <div class="calc" id="calc">
-          <div class="calc-label" id="calc-label">
+          <div class="price-label" id="price-label">
             <div class="price-for-one">
               Цена за одну услугу:
               <div id="result"></div>
             </div>
-            <input required type="text" name="coefficient-input" placeholder="сколько желаете?">
+            Выберете количество:
+            <input id="coefficient-input" required type="text" name="coefficient-input" placeholder="сколько желаете?">
           </div>
           <div class="radios" id="radios"> 
             <lablel class="radio-label"><input type="radio" id="radio" name="services-options" value="option1">На один час</lablel>

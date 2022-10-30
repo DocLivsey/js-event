@@ -4,53 +4,66 @@ body{
     radial-gradient(gold, goldenrod) fixed;
     background-size: 100%;  
 }
-div{
+.content{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 1%;
-    font-size: 150%;
     padding: 1%;
-    text-align: center;
+    font-size: 150%;
 }
 aside{
     display: flex;
     flex-direction: column;
     width: 30%;
-    font-size: 100%;
     height: 100%;
     padding: 1%;
     background-color: aquamarine;
     border-radius: 16px;
     border: double;
 }
+.choose{
+    font-size: 80%;
+    padding: 1%;
+    border-radius: 16px;
+}
 .price-list{
     width: 100%;
     border-radius: 16px;
 }
-.choose{
-    font-size: 70%;
-}
 .form{
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin: 0%;
-    margin-top: 20%;
-    margin-bottom: 20%;
+    padding: 1%;
+    height: 50%;
+    font-size: 150%;
     border: double;
     border-radius: 16px;
     background-color: blue;
 }
 .calc{
+    display: flex;
+    flex-direction: column;
     padding: 0%;
     margin: 0%;
     font-size: 100%;
+}
+.price-label{
+    display: flex;
+    flex-direction: column;
+}
+.price-for-one{
+    display: flex;
     flex-direction: column;
 }
 .radios{
+    display: flex;
     font-size: 75%;
     flex-direction: column;
     text-align: left;
 }
 .checkboxes{
+    display: flex;
     flex-direction: column;
     text-align: left;
     font-size: 75%;
@@ -67,15 +80,15 @@ aside{
 }
 input{
     font-size: 55%;
-    padding: 0%;
+    padding: 1%;
     margin: 0%;
     border: groove;
     border-radius: 8px;
 }
 button{
     font-size: 55%;
-    padding: 0%;
+    padding: 1%;
     margin: 0%;
     border: groove;
-    border-radius: 8px;
+    border-radius: 16px;
 }

@@ -65,11 +65,11 @@ function updatePrice() {
 }
 
 window.addEventListener('DOMContentLoaded', function (event) {
-  let calcDiv = document.getElementById("calc-label");
+  let calcDiv = document.getElementById("price-label");
   calcDiv.style.display = "flex";
 
-  let buttonInput = document.getElementById("output-button");
-  buttonInput.style.display = "flex";
+  let buttonOutput = document.getElementById("output-button");
+  buttonOutput.style.display = "none";
   
   // Скрываем радиокнопки.
   let radioDiv = document.getElementById("radios");
@@ -126,7 +126,9 @@ function clickEvent(){
 }
 
 function clickEventSecond(){
-  let text = document.getElementById("result");
-  alert(text[0]);
+  let text = document.getElementById("coefficient-input");
+  if(text[0].match(/^[1-9][0-9]*$/g) == null) {
+    alert("Введено не число");
+  }
   return false;
 }
