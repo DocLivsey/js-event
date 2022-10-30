@@ -55,15 +55,15 @@ aside{
     text-align: left;
     font-size: 75%;
 }
-#button-calc{
-    margin-top: 2%;
-}
 #result{
     font-size: 100%;
 }
 .output-button{
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: 100%;
+}
+#commit-button{
+    padding: 1%;
 }
 input{
     font-size: 55%;

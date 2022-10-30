@@ -24,7 +24,10 @@
         <form action="/" method="post">
         <div class="calc" id="calc">
           <div class="calc-label" id="calc-label">
-            <label for="coefficient-input" id="out-label"></label>
+            <div class="price-for-one">
+              Цена за одну услугу:
+              <div id="result"></div>
+            </div>
             <input required type="text" name="coefficient-input" placeholder="сколько желаете?">
           </div>
           <div class="radios" id="radios"> 
@@ -36,11 +39,13 @@
             <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-1" value="prop1">Побыковать</label>
             <label class="checkbox-label"><input type="checkbox" id="checkbox" name="check-2" value="prop2">Ударить первым</label>
           </div>
-          <div id="result"></div>
-          <div id="new-result"></div>
+          <div class="final-price">
+            Итого:
+            <div id="final-result"></div>
+          </div>
         </div>
         <div class="output-button" id="output-button">
-          <button id="button3" onclick="return clickEvent();">ПОДТВЕРДИТЬ</button>
+          <button id="commit-button" onclick="return clickEvent();">ПОДТВЕРДИТЬ</button>
         </div>
       </form>
       </div>

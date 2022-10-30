@@ -60,7 +60,7 @@ function updatePrice() {
   prodPrice.innerHTML = price + " рублей";
 
   let f1 = document.getElementsByName("coefficient-input");
-  let res = document.getElementById("new-result");
+  let res = document.getElementById("final-result");
   res.innerHTML = f1[0].value * price;
 }
 
@@ -106,9 +106,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
   });
 
-  let f1 = document.getElementsByName("coefficient-input");
-  f1[0].addEventListener("change", function (event) {
-    if (f1[0].value.match(/^[1-9][0-9]*$/g) == null) {
+  let coef = document.getElementsByName("coefficient-input");
+  coef[0].addEventListener("change", function (event) {
+    if (coef[0].value.match(/^[1-9][0-9]*$/g) == null) {
       alert("Введено не число");
       res.innerHTML = 0;
     }
